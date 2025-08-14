@@ -1,5 +1,5 @@
 import React from 'react'
-import ListCard from '../components/card/listCard'
+import ListCard from '../components/card/ListCard'
 
 
 const Cart = () => {
