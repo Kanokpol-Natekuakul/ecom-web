@@ -12,24 +12,21 @@ const Shop = () => {
     getProduct()
   },[])
   return (
-    <div className='flex'>
-      <div className='w-1/4 p-4 bg-gray-100 h-screen'>
+    <div className="flex flex-col md:flex-row max-w-7xl mx-auto px-2 py-6 gap-6">
+      <aside className="md:w-1/4 w-full bg-gray-50 rounded-lg shadow-sm p-4 mb-4 md:mb-0">
         <SearchCard />
-      </div>
-      <div className='w-1/2 p-4 h-screen overflow-y-auto'>
-      <p className='text-2xl font-bold mb-4'>สินค้าทั้งหมด</p>
-      <div className='flex flex-wrap gap-4'>
-        {
-          products.map((item,index)=>
-          
-            <ProductCard key={index} item={item}/>
-          )
-        }
-      </div>
-      </div>
-      <div className='w-1/4 p-4 bg-gray-100 h-screen overflow-y-auto'>
+      </aside>
+      <main className="md:w-1/2 w-full p-2">
+        <p className="text-xl md:text-2xl font-bold mb-4 text-gray-700">สินค้าทั้งหมด</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {
+            products.map((item,index)=><ProductCard key={index} item={item}/>)
+          }
+        </div>
+      </main>
+      <aside className="md:w-1/4 w-full bg-gray-50 rounded-lg shadow-sm p-4">
         <CartCard/>
-      </div>
+      </aside>
     </div>
   )
 }

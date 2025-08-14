@@ -4,7 +4,7 @@ import ListCard from '../components/card/ListCard'
 
 const Cart = () => {
   return (
-    <div>
+    <div className="max-w-4xl mx-auto px-4 py-6">
       <ListCard/>
     </div>
   )

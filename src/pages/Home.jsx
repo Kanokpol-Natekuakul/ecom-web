@@ -5,11 +5,15 @@ import NewProduct from '../components/home/NewProduct'
 
 const Home = () => {
   return (
-    <div>
+    <div className="max-w-6xl mx-auto px-4 py-6 space-y-8">
       <Content />
-      <p className='text-2xl text-center my-4'>สินค้าขายดี</p>
+      <div className="text-center">
+        <p className="text-xl md:text-2xl font-semibold text-gray-700 mb-4">สินค้าขายดี</p>
+      </div>
       <BestSeller/>
-      <p className='text-2xl text-center my-4'>สินค้าใหม่</p>
+      <div className="text-center">
+        <p className="text-xl md:text-2xl font-semibold text-gray-700 mb-4">สินค้าใหม่</p>
+      </div>
       <NewProduct/>
     </div>
   )
